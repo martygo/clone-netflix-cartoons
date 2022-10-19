@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+$primary: #181818; 
+$secondary: #000;
+$tertiary: #fff;
+$help: #e50914;
+
+@mixin button() {
+    background-color: $help;
+    color: $tertiary;
+    border: none;
+    border-radius: 2px;
+    font-size: 13px;
+    padding: 6px 27px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: $tertiary;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.App {
+    &__header {
+        width: 100%;
+        background-color: $primary;
+        color: $tertiary;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            padding: 0.6rem 0;
+        }
+
+        &__logo {
+            fill: $help;
+            width: 100px;
+
+            @media (max-width: 768px) {
+                width: 26px;
+                height: 44px;
+
+                &--large {
+                    display: none;
+                }   
+            }
+
+            @media (min-width: 768px) {
+                &--medium {
+                    display: none;
+                }    
+            }
+        }
+
+        &__content {
+            display: flex;
+            gap: 0.5rem;
+            
+            li {
+                color: $tertiary;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+
+            @media (max-width: 768px) {
+                li {
+                    &:nth-child(1) {
+                        display: none;
+                    }
+                }
+            }
+
+            &--button {
+                @include button();
+
+                &--muted {
+                    background-color: transparent;
+                    border: 1px solid $tertiary;
+                }
+            }
+        }
+    }
+}
