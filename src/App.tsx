@@ -60,17 +60,17 @@ function App() {
         </ul>
       </header>
 
-      <section className="collection">
-        <div className="collection__content">
-          <div className="collection__content--title">
-            <h1>TV Cartoons</h1>
-            <p>
+      <main>
+        <section className="App__collection">
+          <div className="App__collection__content">
+            <h1 className="App__collection__content--title">TV Cartoons</h1>
+            <p className="App__collection__content--subtitle">
               Cartoons can take us to different worlds, times and dimensions, all without ever
               leaving the couch. Get ready for laughs, adventure and loads of fun!
             </p>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   );
 }
