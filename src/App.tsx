@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 function App() {
   return (
     <div className="App">
@@ -27,9 +29,9 @@ function App() {
                 id="6fc3e242-27d7-4e52-a8ce-2bbf2554a626-a"
                 r="75%"
                 gradientTransform="matrix(.38 0 .5785 1 .02 0)">
-                <stop offset="60%" stop-opacity=".3"></stop>
-                <stop offset="90%" stop-opacity=".05"></stop>
-                <stop offset="100%" stop-opacity="0"></stop>
+                <stop offset="60%" stopOpacity=".3"></stop>
+                <stop offset="90%" stopOpacity=".05"></stop>
+                <stop offset="100%" stopOpacity="0"></stop>
               </radialGradient>
             </defs>
             <path d="M225 0v1000c60-8 138-14 198-17V0H225" fill="#b1060e"></path>
@@ -60,15 +62,40 @@ function App() {
         </ul>
       </header>
 
-      <main>
-        <section className="App__collection">
-          <div className="App__collection__content">
-            <h1 className="App__collection__content--title">TV Cartoons</h1>
-            <p className="App__collection__content--subtitle">
-              Cartoons can take us to different worlds, times and dimensions, all without ever
-              leaving the couch. Get ready for laughs, adventure and loads of fun!
-            </p>
-          </div>
+      <main className="App__collection">
+        <section className="App__collection__content">
+          <h1 className="App__collection__content--title">TV Cartoons</h1>
+          <p className="App__collection__content--subtitle">
+            Cartoons can take us to different worlds, times and dimensions, all without ever leaving
+            the couch. Get ready for laughs, adventure and loads of fun!
+          </p>
+        </section>
+
+        <section className="App__collection__discover">
+          <a href="#" className="App__collection__discover__title">
+            <h1 className="App__collection__discover__title--name">Popular on Netflix</h1>
+            <p className="App__collection__discover__title--link">Explore more</p>
+          </a>
+
+          <li className="App__collection__discover__list">
+            <a href="#" className="App__collection__discover__list__item">
+              <img
+                src="https://occ-0-6520-299.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTvqRSjNUe7xgocZY0VR9ZCSxONhtFXq9vnQHt1ewASaFwGSqfJ9mOcMb1G3hVJ3P-mgaC61-vY4DrrxSY4uWxdCd3QcKQ_0SSY.jpg?r=353"
+                alt="netflix"
+                className="App__collection__discover__list__item--cover"
+              />
+              <h3 className="App__collection__discover__list__item--title">Paw Patrol</h3>
+            </a>
+
+            <a href="#" className="App__collection__discover__list__item">
+              <img
+                src="https://occ-0-6520-299.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTvqRSjNUe7xgocZY0VR9ZCSxONhtFXq9vnQHt1ewASaFwGSqfJ9mOcMb1G3hVJ3P-mgaC61-vY4DrrxSY4uWxdCd3QcKQ_0SSY.jpg?r=353"
+                alt="netflix"
+                className="App__collection__discover__list__item--cover"
+              />
+              <h3 className="App__collection__discover__list__item--title">Paw Patrol</h3>
+            </a>
+          </li>
         </section>
       </main>
     </div>
