@@ -76,23 +76,18 @@ function App() {
           </a>
 
           <li className="App__collection__discover__list">
-            <a href="#" className="App__collection__discover__list__item">
-              <img
-                src="https://occ-0-6520-299.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTvqRSjNUe7xgocZY0VR9ZCSxONhtFXq9vnQHt1ewASaFwGSqfJ9mOcMb1G3hVJ3P-mgaC61-vY4DrrxSY4uWxdCd3QcKQ_0SSY.jpg?r=353"
-                alt="netflix"
-                className="App__collection__discover__list__item--cover"
-              />
-              <h3 className="App__collection__discover__list__item--title">Paw Patrol</h3>
-            </a>
-
-            <a href="#" className="App__collection__discover__list__item">
-              <img
-                src="https://occ-0-6520-299.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTvqRSjNUe7xgocZY0VR9ZCSxONhtFXq9vnQHt1ewASaFwGSqfJ9mOcMb1G3hVJ3P-mgaC61-vY4DrrxSY4uWxdCd3QcKQ_0SSY.jpg?r=353"
-                alt="netflix"
-                className="App__collection__discover__list__item--cover"
-              />
-              <h3 className="App__collection__discover__list__item--title">Paw Patrol</h3>
-            </a>
+            {[...Array(5)].map((_, i) => {
+              return (
+                <a href="#" className="App__collection__discover__list__item" key={i}>
+                  <img
+                    src="https://occ-0-6520-299.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTvqRSjNUe7xgocZY0VR9ZCSxONhtFXq9vnQHt1ewASaFwGSqfJ9mOcMb1G3hVJ3P-mgaC61-vY4DrrxSY4uWxdCd3QcKQ_0SSY.jpg?r=353"
+                    alt="netflix"
+                    className="App__collection__discover__list__item--cover"
+                  />
+                  <h3 className="App__collection__discover__list__item--title">Paw Patrol</h3>
+                </a>
+              );
+            })}
           </li>
         </section>
       </main>
