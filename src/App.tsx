@@ -134,6 +134,48 @@ function App() {
             })}
           </li>
         </section>
+
+        <section className="App__collection__discover">
+          <a href="#" className="App__collection__discover__title">
+            <h1 className="App__collection__discover__title--name">Feel-Good</h1>
+          </a>
+
+          <li className="App__collection__discover__list">
+            {[...Array(5)].map((_, i) => {
+              return (
+                <a href="#" className="App__collection__discover__list__item" key={i}>
+                  <img
+                    src="https://occ-0-6520-1167.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTD2pKAMxV5-KwLsey8qSxtJNLhYTJIGwOrj-un9ucvBeEPQHH9Hz8Um2MofcDXeK2J8IVBRV3SCKg3M1cZvn4iDon_aTRNfZ8E.jpg?r=b42"
+                    alt="netflix"
+                    className="App__collection__discover__list__item--cover"
+                  />
+                  <h3 className="App__collection__discover__list__item--title">Paw Patrol</h3>
+                </a>
+              );
+            })}
+          </li>
+        </section>
+
+        <section className="App__collection__discover">
+          <a href="#" className="App__collection__discover__title">
+            <h1 className="App__collection__discover__title--name">Children & Family TV</h1>
+          </a>
+
+          <li className="App__collection__discover__list">
+            {[...Array(5)].map((_, i) => {
+              return (
+                <a href="#" className="App__collection__discover__list__item" key={i}>
+                  <img
+                    src="https://occ-0-6520-1167.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABS4P5ctBUjX0xTORkSwjLVHGnYqq30TQlp1nR1BdvGhbIXVp_p10GJHtlejA1yYumPTqWVAQhc19FLkNQ4CWWbI9vIO4bge6-XJNxd6YhJyg5qh1Yw6xbD-lT6IqKeoMQxYf.jpg?r=feb"
+                    alt="netflix"
+                    className="App__collection__discover__list__item--cover"
+                  />
+                  <h3 className="App__collection__discover__list__item--title">Paw Patrol</h3>
+                </a>
+              );
+            })}
+          </li>
+        </section>
       </main>
     </div>
   );
