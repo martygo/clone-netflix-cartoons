@@ -192,6 +192,29 @@ function App() {
           </div>
         </section>
       </main>
+
+      <footer className="App__footer">
+        <div className="App__footer__content">
+          <p className="App__footer__content--help">
+            <a href="#">Questions? Contact us.</a>
+          </p>
+
+          <ul className="App__footer--links">
+            <li className="App__footer__links--item">
+              <a href="#">FAQ</a>
+            </li>
+            <li className="App__footer__links--item">
+              <a href="#">Help Center</a>
+            </li>
+            <li className="App__footer__links--item">
+              <a href="#">Account</a>
+            </li>
+            <li className="App__footer__links--item">
+              <a href="#">Media Center</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
   );
 }
