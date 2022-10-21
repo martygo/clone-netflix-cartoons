@@ -90,6 +90,50 @@ function App() {
             })}
           </li>
         </section>
+
+        <section className="App__collection__discover">
+          <a href="#" className="App__collection__discover__title">
+            <h1 className="App__collection__discover__title--name">Released in the Past Year</h1>
+          </a>
+
+          <li className="App__collection__discover__list">
+            {[...Array(5)].map((_, i) => {
+              return (
+                <a href="#" className="App__collection__discover__list__item" key={i}>
+                  <img
+                    src="https://occ-0-6520-1167.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZ3HB7AGE2hgB9V6ZRAD-8QFDkM8CR3MRYEyLiXzNoJ_SFdzq_WV31_Zb1JiO7C8njiOpd36ZcUOIzNYpRO07oj-wnzRBmccdJ9O6LxKudaQfmahKYWfqrh2qDWL6bPsQKSl.jpg?r=50f"
+                    alt="netflix"
+                    className="App__collection__discover__list__item--cover"
+                  />
+                  <h3 className="App__collection__discover__list__item--title">Paw Patrol</h3>
+                </a>
+              );
+            })}
+          </li>
+        </section>
+
+        <section className="App__collection__discover">
+          <a href="#" className="App__collection__discover__title">
+            <h1 className="App__collection__discover__title--name">
+              Watch Together for Older Kids
+            </h1>
+          </a>
+
+          <li className="App__collection__discover__list">
+            {[...Array(5)].map((_, i) => {
+              return (
+                <a href="#" className="App__collection__discover__list__item" key={i}>
+                  <img
+                    src="https://occ-0-6520-1167.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeAN3ob4F_dAOI-MG-PTusehg1W88Nwr0SOmrwEVQZ1rcLHAU86IOQmzDZvLB3vFM8-O1Kso895QZ-b1FFSfA-DCMrmFGDv-BUUIRy4vpiLs0eQyGHEqwm2CRcmeNYk8Mftr.jpg?r=fa2"
+                    alt="netflix"
+                    className="App__collection__discover__list__item--cover"
+                  />
+                  <h3 className="App__collection__discover__list__item--title">Paw Patrol</h3>
+                </a>
+              );
+            })}
+          </li>
+        </section>
       </main>
     </div>
   );
