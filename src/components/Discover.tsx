@@ -1,17 +1,22 @@
-import { IPopular } from '../data/popular';
+import React from 'react';
+import ShowContext from '../context/ShowContext';
+import { IPopular } from '../types/IPopular';
 
 type DiscoverProps = {
   title: string;
   link?: string;
-  data: IPopular[];
   className?: string;
 };
 
-function Discover({ title, link, data, className }: DiscoverProps) {
-  const blurClass = className ? className : '';
+type DiscoverItemProps = {
+  item: IPopular;
+};
+
+function Discover({ title, link, className }: DiscoverProps) {
+  const { shows } = React.useContext(ShowContext);
 
   return (
-    <section className={`App__collection__discover ${blurClass}`}>
+    <section className={`App__collection__discover ${className ? className : ''}`}>
       <a href="#" className="App__collection__discover__title">
         <h1 className="App__collection__discover__title--name">{title}</h1>
         <p className={link?.trim() != null ? 'App__collection__discover__title--link' : ''}>
@@ -20,20 +25,20 @@ function Discover({ title, link, data, className }: DiscoverProps) {
       </a>
 
       <li className="App__collection__discover__list">
-        {data.map((item, index) => {
-          return (
-            <a href="#" className="App__collection__discover__list__item" key={index}>
-              <img
-                src={item.image}
-                alt={item.title}
-                className="App__collection__discover__list__item--cover"
-              />
-              <h3 className="App__collection__discover__list__item--title">{item.title}</h3>
-            </a>
-          );
+        {shows.map((show) => {
+          return <DiscoverItem item={show} key={show.id}/>;
         })}
       </li>
     </section>
+  );
+}
+
+function DiscoverItem({ item }: DiscoverItemProps) {
+  return (
+    <a href="#" className="App__collection__discover__list__item">
+      <img src={item.image} alt={item.title} className="App__collection__discover__list__item--cover" />
+      <h3 className="App__collection__discover__list__item--title">{item.title}</h3>
+    </a>
   );
 }
 

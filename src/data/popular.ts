@@ -1,8 +1,4 @@
-export interface IPopular {
-  id: number | string;
-  title: string;
-  image: string;
-}
+import { IPopular } from '../types/IPopular';
 
 const shows: IPopular[] = [
   {
@@ -37,6 +33,6 @@ const shows: IPopular[] = [
   }
 ];
 
-const data = shows.sort(() => Math.random() - 0.5);
+const data: IPopular[] = shows.sort(() => Math.random() - 0.5);
 
 export default data;
