@@ -26,7 +26,7 @@ function Discover({ title, link, className }: DiscoverProps) {
 
       <li className="App__collection__discover__list">
         {shows.map((show) => {
-          return <DiscoverItem item={show} key={show.id}/>;
+          return <DiscoverItem item={show} key={show.id} />;
         })}
       </li>
     </section>
@@ -36,7 +36,11 @@ function Discover({ title, link, className }: DiscoverProps) {
 function DiscoverItem({ item }: DiscoverItemProps) {
   return (
     <a href="#" className="App__collection__discover__list__item">
-      <img src={item.image} alt={item.title} className="App__collection__discover__list__item--cover" />
+      <img
+        src={item.image}
+        alt={item.title}
+        className="App__collection__discover__list__item--cover"
+      />
       <h3 className="App__collection__discover__list__item--title">{item.title}</h3>
     </a>
   );
