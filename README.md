@@ -16,6 +16,12 @@ yarn install
 yarn dev
 ```
 
+### Run tests end-2end
+
+```
+yarn cy
+```
+
 ### Compiles and minifies for production
 
 ```
