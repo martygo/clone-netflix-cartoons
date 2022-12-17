@@ -1,50 +1,33 @@
-import React, { useContext, useState, useEffect, ReactNode } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   signOut,
-  onAuthStateChanged
+  onAuthStateChanged,
+  UserCredential
 } from '@firebase/auth';
 import { auth } from '@/plugin/firebase';
+import { AuthContextProps, AuthProviderProps } from '@/types/IAuth';
 
-type AuthProps = {
-  email: string;
-  password: string;
-};
+const AuthContext = React.createContext<AuthContextProps>({} as AuthContextProps);
 
-type AuthProviderProps = {
-  children: ReactNode;
-};
-
-export interface IAuthContext {
-  currentUser: unknown;
-  signup?: Function;
-  login?: Function;
-  logout?: Function;
-}
-
-const AuthContext = React.createContext<IAuthContext>({
-  currentUser: null
-});
-
-export function useAuth() {
+export function useAuth(): AuthContextProps {
   return useContext(AuthContext);
 }
 
 export function AuthProvider({ children }: AuthProviderProps) {
-  const [currentUser, setCurrentUser] = useState<unknown>(null);
+  const [currentUser, setCurrentUser] = useState<any>(null);
   const [loading, setloading] = useState<boolean>(true);
 
-  function signup({ email, password }: AuthProps) {
-    createUserWithEmailAndPassword(auth, email, password);
-    return;
+  function signup(email: string, password: string): Promise<UserCredential> {
+    return createUserWithEmailAndPassword(auth, email, password);
   }
 
-  function login({ email, password }: AuthProps) {
+  function login(email: string, password: string): Promise<UserCredential> {
     return signInWithEmailAndPassword(auth, email, password);
   }
 
-  function logout() {
+  function logout(): Promise<void> {
     return signOut(auth);
   }
 
@@ -57,12 +40,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
     return unsubscribe;
   }, []);
 
-  const values = {
-    currentUser: currentUser,
+  const value = {
+    currentUser,
     signup,
     login,
     logout
   };
 
-  return <AuthContext.Provider value={values}>{!loading && children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
 }
