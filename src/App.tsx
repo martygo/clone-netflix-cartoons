@@ -6,11 +6,14 @@ import Metadata from '@/components/Metadata';
 import Discover from '@/components/Discover';
 import CTA from '@/components/CTA';
 import { useAuth } from '@/context/AuthContext';
+import Login from './components/Login';
 
 function App() {
   const { currentUser } = useAuth();
 
-  console.log(currentUser);
+  if (!currentUser) {
+    return <Login />;
+  }
 
   return (
     <ShowContext.Provider value={showDefaultData}>
