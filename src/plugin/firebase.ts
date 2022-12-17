@@ -3,12 +3,12 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBlALkbqUVAkobYvUVcQY-9BHSXjZA30xI',
-  authDomain: 'netflix-cartoons.firebaseapp.com',
-  projectId: 'netflix-cartoons',
-  storageBucket: 'netflix-cartoons.appspot.com',
-  messagingSenderId: '701576982405',
-  appId: '1:701576982405:web:b4a6eb89470ec21a191eec'
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKECT,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
