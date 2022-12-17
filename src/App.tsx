@@ -11,9 +11,6 @@ function App() {
     <ShowContext.Provider value={showDefaultData}>
       <Layout>
         <MainContent>
-          <pre style={{ color: 'white' }}>
-            import.meta.env.VITE_API_KEY: {import.meta.env.VITE_API_KEY}
-          </pre>
           <Metadata
             title="TV Cartoons"
             subtile="Cartoons can take us to different worlds, times and dimensions, all without ever leaving
