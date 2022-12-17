@@ -1,4 +1,4 @@
-import { IPopular } from '../types/IPopular';
+import { IPopular } from '@/types/IPopular';
 
 const shows: IPopular[] = [
   {

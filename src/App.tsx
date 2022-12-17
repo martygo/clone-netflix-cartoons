@@ -1,10 +1,10 @@
-import ShowContext, { showDefaultData } from './context/ShowContext';
+import ShowContext, { showDefaultData } from '@/context/ShowContext';
 
-import Layout from './components/Layout';
-import MainContent from './components/MainContent';
-import Metadata from './components/Metadata';
-import Discover from './components/Discover';
-import CTA from './components/CTA';
+import Layout from '@/components/Layout';
+import MainContent from '@/components/MainContent';
+import Metadata from '@/components/Metadata';
+import Discover from '@/components/Discover';
+import CTA from '@/components/CTA';
 
 function App() {
   return (
