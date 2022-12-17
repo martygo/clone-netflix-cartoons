@@ -16,7 +16,16 @@ type AuthProviderProps = {
   children: ReactNode;
 };
 
-const AuthContext = React.createContext({});
+export interface IAuthContext {
+  currentUser: unknown;
+  signup?: Function;
+  login?: Function;
+  logout?: Function;
+}
+
+const AuthContext = React.createContext<IAuthContext>({
+  currentUser: null
+});
 
 export function useAuth() {
   return useContext(AuthContext);
@@ -48,12 +57,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
     return unsubscribe;
   }, []);
 
-  const value = {
-    currentUser,
-    login,
+  const values = {
+    currentUser: currentUser,
     signup,
+    login,
     logout
   };
 
-  return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={values}>{!loading && children}</AuthContext.Provider>;
 }

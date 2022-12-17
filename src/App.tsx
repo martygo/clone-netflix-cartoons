@@ -5,8 +5,13 @@ import MainContent from '@/components/MainContent';
 import Metadata from '@/components/Metadata';
 import Discover from '@/components/Discover';
 import CTA from '@/components/CTA';
+import { useAuth } from '@/context/AuthContext';
 
 function App() {
+  const { currentUser } = useAuth();
+
+  console.log(currentUser);
+
   return (
     <ShowContext.Provider value={showDefaultData}>
       <Layout>
