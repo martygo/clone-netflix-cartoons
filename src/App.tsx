@@ -6,7 +6,7 @@ import Metadata from '@/components/Metadata';
 import Discover from '@/components/Discover';
 import CTA from '@/components/CTA';
 import { useAuth } from '@/context/AuthContext';
-import Login from './components/Login';
+import Login from './components/Login/Login';
 
 function App() {
   const { currentUser } = useAuth();
