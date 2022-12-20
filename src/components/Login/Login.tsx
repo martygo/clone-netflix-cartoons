@@ -11,7 +11,37 @@ export default function Login() {
             className="Login__background--picture"
           />
         </div>
-        <div className="Login__body"></div>
+        <div className="Login__body">
+          <div>
+            <div className="Login__body__content">
+              <div className="Login__form">
+                <h1 className="Login__form--title">Sign In</h1>
+
+                <form className="Login__form__main">
+                  <div className="Input">
+                    <label htmlFor="email" className="Input__label">
+                      <input type="text" required id="email" />
+                      <span className="Input__label--text">Email</span>
+                      <span className="Input__label--helper Input__label--helper--error">
+                        Please enter a valid email or phone number.
+                      </span>
+                    </label>
+                  </div>
+
+                  <div className="Input">
+                    <label htmlFor="email" className="Input__label">
+                      <input type="text" required id="email" />
+                      <span className="Input__label--text">Email</span>
+                      <span className="Input__label--helper Input__label--helper--error">
+                        Please enter a valid email or phone number.
+                      </span>
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
