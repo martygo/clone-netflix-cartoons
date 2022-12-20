@@ -22,15 +22,14 @@ $help: #e50914;
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html,
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 100%;
+ 
   background-color: $primary;
-  height: 100vh;
+ 
 }
 
 a {
