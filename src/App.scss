@@ -27,7 +27,6 @@ $help: #e50914;
 html,
 body {
   font-family: 'Open Sans', sans-serif;
- 
   background-color: $primary;
  
 }
@@ -43,6 +42,8 @@ li {
 }
 
 .App {
+  box-sizing: border-box;
+  
   &__header {
     position: fixed;
     top: 0;
@@ -56,6 +57,7 @@ li {
     justify-content: space-between;
     align-items: center;
     z-index: 999;
+    box-sizing: border-box;
 
     @media (max-width: 768px) {
       padding: 0.6rem 1rem;
@@ -120,6 +122,7 @@ li {
     width: 100%;
     padding: 0 1rem;
     margin-top: calc(1rem + 60px);
+    box-sizing: border-box;
 
     &__content {
       width: 100%;
