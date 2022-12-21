@@ -22,15 +22,13 @@ $help: #e50914;
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html,
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 100%;
   background-color: $primary;
-  height: 100vh;
+ 
 }
 
 a {
@@ -44,6 +42,8 @@ li {
 }
 
 .App {
+  box-sizing: border-box;
+  
   &__header {
     position: fixed;
     top: 0;
@@ -57,6 +57,7 @@ li {
     justify-content: space-between;
     align-items: center;
     z-index: 999;
+    box-sizing: border-box;
 
     @media (max-width: 768px) {
       padding: 0.6rem 1rem;
@@ -121,6 +122,7 @@ li {
     width: 100%;
     padding: 0 1rem;
     margin-top: calc(1rem + 60px);
+    box-sizing: border-box;
 
     &__content {
       width: 100%;
@@ -305,6 +307,10 @@ li {
   }
 
   &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 60%;
     margin-top: 2.5rem;
 

@@ -1,12 +1,20 @@
-import ShowContext, { showDefaultData } from './context/ShowContext';
+import ShowContext, { showDefaultData } from '@/context/ShowContext';
 
-import Layout from './components/Layout';
-import MainContent from './components/MainContent';
-import Metadata from './components/Metadata';
-import Discover from './components/Discover';
-import CTA from './components/CTA';
+import Layout from '@/components/Layout';
+import MainContent from '@/components/MainContent';
+import Metadata from '@/components/Metadata';
+import Discover from '@/components/Discover';
+import CTA from '@/components/CTA';
+import { useAuth } from '@/context/AuthContext';
+import Login from './components/Login/Login';
 
 function App() {
+  const { currentUser } = useAuth();
+
+  if (!currentUser) {
+    return <Login />;
+  }
+
   return (
     <ShowContext.Provider value={showDefaultData}>
       <Layout>

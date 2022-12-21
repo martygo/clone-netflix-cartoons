@@ -1,7 +1,7 @@
 import React from 'react';
-import data from '../data/popular';
+import data from '@/data/popular';
 
-import { IPopular } from './../types/IPopular';
+import { IPopular } from '@/types/IPopular';
 
 export interface IShowContextData {
   shows: IPopular[];

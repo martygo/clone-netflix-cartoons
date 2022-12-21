@@ -1,4 +1,12 @@
+import { useAuth } from '@/context/AuthContext';
+
 function Header() {
+  const { logout } = useAuth();
+
+  async function handleLogout() {
+    return await logout();
+  }
+
   return (
     <header className="App__header">
       <a href="#" className="App__header__logo">
@@ -50,8 +58,11 @@ function Header() {
           </a>
         </li>
         <li>
-          <a href="#" className="App__header__content--button App__header__content--button--muted">
-            sign in
+          <a
+            onClick={handleLogout}
+            href="#"
+            className="App__header__content--button App__header__content--button--muted">
+            logout
           </a>
         </li>
       </ul>
