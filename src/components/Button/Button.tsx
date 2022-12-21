@@ -9,7 +9,11 @@ interface IButtonProps
   > {}
 
 const Button: React.FC<IButtonProps> = ({ children, ...props }) => {
-  return <button className="Button">{children}</button>;
+  return (
+    <button className="Button" {...props}>
+      {children}
+    </button>
+  );
 };
 
 export { Button };
